@@ -1,0 +1,28 @@
+JS
+document.addEventListener('DOMContentLoaded', () => {
+    let Wrapper = document.querySelector('.Wrapper');
+    let reg = document.querySelector('.registerlink');
+    let login = document.querySelector('.loginlink');
+    let btn = document.querySelector('.loginbtn'); 
+    let close =document.querySelector('.iconclose');  // Corrected selector to include the dot
+
+    reg.addEventListener('click', () => {
+        Wrapper.classList.add('active');
+        console.log(Wrapper.classList); // Check if 'active' class is added
+    });
+
+    login.addEventListener('click', () => {
+        Wrapper.classList.remove('active');
+        console.log(Wrapper.classList); // Check if 'active' class is removed
+    });
+
+    btn.addEventListener('click', () => {
+        Wrapper.classList.add('active-popup');
+        console.log(Wrapper.classList); // Check if 'active-popup' class is added
+    });
+    close.addEventListener('click', () => {
+        Wrapper.classList.remove('active-popup');
+        console.log(Wrapper.classList); // Check if 'active-popup' class is added
+    });
+
+});
